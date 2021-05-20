@@ -1,0 +1,51 @@
+.tlj
+{
+    font-size: 30pt;
+    position: absolute;
+    top: -5px;
+    left: 620px;
+}
+.navi
+{
+    width: 1090px;
+    padding: 20px 0px 20px 20px;
+    background-color: black;
+}
+.navig
+{
+    color: white;
+}
+.aside, .article
+{
+    display: inline-block;
+}
+.article
+{
+    width: 720px;
+}
+.aside
+{
+    position: absolute;
+    width: 370px;
+    height: 415px;
+    top: 415px;
+    padding: 10px 10px 10px 10px;
+    background-color: grey;
+}
+.crochet
+{
+    position: absolute;
+    top: -26px;
+    left: -1px;
+    font-size: 17pt;
+}
+.foot
+{
+    width: 1090px;
+    padding: 20px 0px 20px 20px;
+    background-color: black;
+}
+.autre
+{
+    color: white;
+}
