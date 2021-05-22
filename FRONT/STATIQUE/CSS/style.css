@@ -1,10 +1,10 @@
 .header
 {
     display: flex;
-    justify-content: center;
 }
-.logo
+.hidden
 {
+    width: 25%;
 }
 .tlj
 {
@@ -28,19 +28,16 @@ nav
 {
     display: flex;
     width: 100%;
-    background-color: blue;
 }
 .art
 {
     width: 60%;
-    background-color: rgb(188, 226, 17);
 }
 .asi
 {
     width: 40%;
     background-color: grey;
 }
-
 .crochet
 {
     font-size: 17pt;
