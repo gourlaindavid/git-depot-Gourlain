@@ -19,16 +19,14 @@
             </div>
             <img src="images/promotion.jpg" alt="promo">
         </nav>
-            <heading>
-                <h2>Contact</h2>
-            </heading>
+            <h2>Contact</h2><br><hr>
             <p>* Ces zones sont obligatoires</p>
             <form action="http://bienvu.net/script.php" method="POST" id="formulaire_contact">
                     <fieldset>
                         <legend>Vos coordonnées</legend>
                         <label for="nom">Votre nom* :</label><input type="text" name="nom" id="nom" size="50" maxlength="50" required><br>
                         <label for="prénom">Votre prénom* :</label><input type="text" name="prénom" id="prénom" size="50" maxlength="50" required><br>
-                        <label for="sexe">Sexe* :</label><input type="radio" name="sexe" value="homme"> Masculin
+                        <label for="genre">Sexe* :</label><input type="radio" name="sexe" id="genre" value="homme"> Masculin
                                                          <input type="radio" name="sexe" value="femme"> Féminin <br>
                         <label for="date">Date de naissance* :</label><input type="date" name="ddn" id="date" required><br>
                         <label for="cp">Code postal* :</label><input type="text" name="cp" id="cp" size="50" maxlength="50" required><br>
@@ -38,14 +36,14 @@
                     </fieldset>
                     <fieldset>
                         <legend>Votre demande</legend>
-                        <label for="sujet">Sujet* :</label><select name="sujet" required>
-                                                                <option>Veuillez séléctionner un sujet</option>
-                                                                <option>Mes commandes</option>
-                                                                <option>Question sur un produit</option>
-                                                                <option>Réclamation</option>
-                                                                <option>Autres</option>
+                        <label for="sujet">Sujet* :</label><select name="sujet" id="sujet" required>
+                                                                <option value="">Veuillez séléctionner un sujet</option>
+                                                                <option value="commande">Mes commandes</option>
+                                                                <option value="questprod">Question sur un produit</option>
+                                                                <option value="reclam">Réclamation</option>
+                                                                <option value="autr">Autres</option>
                                                            </select><br>
-                        <label for="question">Votre question* :</label><textarea name="question" rows="2" cols="30" required></textarea><br>
+                        <label for="quest">Votre question* :</label><textarea name="question" id="quest" rows="2" cols="30" required></textarea><br>
                     </fieldset>
                     <input type="checkbox" name="formulaire" value="formulaire" required>* J'accepte le traitement informatique de ce formulaire<br>
                     <button type="submit">Envoyer</button>

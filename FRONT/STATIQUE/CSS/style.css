@@ -1,13 +1,22 @@
+.header
+{
+    display: flex;
+    justify-content: center;
+}
+.logo
+{
+}
 .tlj
 {
-    font-size: 30pt;
-    position: absolute;
-    top: -5px;
-    left: 620px;
+    font-size: 25pt;
+}
+nav
+{
+    display: flex;
+    flex-direction: column;
 }
 .navi
 {
-    width: 1090px;
     padding: 20px 0px 20px 20px;
     background-color: black;
 }
@@ -15,33 +24,30 @@
 {
     color: white;
 }
-.aside, .article
+.corp
 {
-    display: inline-block;
+    display: flex;
+    width: 100%;
+    background-color: blue;
 }
-.article
+.art
 {
-    width: 720px;
+    width: 60%;
+    background-color: rgb(188, 226, 17);
 }
-.aside
+.asi
 {
-    position: absolute;
-    width: 370px;
-    height: 415px;
-    top: 415px;
-    padding: 10px 10px 10px 10px;
+    width: 40%;
     background-color: grey;
 }
+
 .crochet
 {
-    position: absolute;
-    top: -26px;
-    left: -1px;
     font-size: 17pt;
 }
 .foot
 {
-    width: 1090px;
+    display: flex;
     padding: 20px 0px 20px 20px;
     background-color: black;
 }
