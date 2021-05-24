@@ -35,6 +35,7 @@ nav
     font-size: 17pt;
 }
 
+/*design des barres de lien*/
 .menulien
 {
     display: flex;
