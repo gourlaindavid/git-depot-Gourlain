@@ -1,61 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>contact jarditou</title>
-        <meta name="gourlain" content="contact">
+        <title>accueil jarditou</title>
+        <meta name="gourlain" content="accueil">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-        <header>
-            <img src="images/jarditou_logo.jpg" alt="jarditou_logo" width="400" height="120">
-            <p class="tlj">Tout le jardin</p>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="index.html" title="index">Accueil</a></li>
-                <li><a href="tableau.html" title="tableau">Tableau</a></li>
-                <li><a href="contact.html" title="contact">Contact</a></li>
-            </ul>
-            <img src="images/promotion.jpg" alt="promo">
-        </nav>
-            <heading>
-                <h2>Contact</h2>
-            </heading>
+        <div class="container">
+            <header>
+                <div class="row">
+                    <img src="images/jarditou_logo.jpg" alt="jarditou_logo" class="col-3 img-fluid d-none d-lg-block">
+                    <p class="col-9 pt-4 text-right h1 d-none d-lg-block">La qualité depuis 70 ans</p>
+                </div>
+            </header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <p class="navbar-brand h3">JardiTou.com</p>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Accueil<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="tableau.html">Tableau</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Votre promotion" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 btn-outline-dark" type="submit">Rechercher</button>
+                  </form>
+                </div>
+              </nav>
+            <img src="images/promotion.jpg" class="img-fluid" alt="promo">
             <p>* Ces zones sont obligatoires</p>
             <form action="http://bienvu.net/script.php" method="POST" id="formulaire_contact">
                     <fieldset>
                         <legend>Vos coordonnées</legend>
-                        <label for="nom">Votre nom* :</label><input type="text" name="nom" id="nom" size="50" maxlength="50" required><br>
-                        <label for="prénom">Votre prénom* :</label><input type="text" name="prénom" id="prénom" size="50" maxlength="50" required><br>
-                        <label for="sexe">Sexe* :</label><input type="radio" name="sexe" value="homme"> Masculin
-                                                         <input type="radio" name="sexe" value="femme"> Féminin <br>
-                        <label for="date">Date de naissance* :</label><input type="date" name="ddn" id="date" required><br>
-                        <label for="cp">Code postal* :</label><input type="text" name="cp" id="cp" size="50" maxlength="50" required><br>
-                        <label for="adresse">Adresse :</label><input type="text" name="adresse" id="adresse" size="50" maxlength="50"><br>
-                        <label for="ville">Ville :</label><input type="text" name="ville" id="ville" size="50" maxlength="50"><br>
-                        <label for="mail">Email* :</label><input type="text" name="mail" id="mail" size="50" maxlength="50" placeholder="dave.loper@afpa.fr" required><br>
+                        <div class="form-group">
+                            <label for="nom">Votre nom* :</label>
+                            <input type="text" name="nom" id="nom" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prénom">Votre prénom* :</label>
+                            <input type="text" name="prénom" id="prénom" class="form-control" required>
+                        </div>
+                        <label for="sexe" class="form-check-label">Sexe* :</label><br>
+                        <div class="form-check form-check-inline">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="sexe" value="féminin">
+                                <label class="form-check-label" for="sexe">Féminin</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="sexe" value="masculin">
+                                <label class="form-check-label" for="sexe">Masculin</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="sexe" value="neutre">
+                                <label class="form-check-label" for="sexe">Neutre</label>
+                            </div>
+                        </div><br><br>
+                        <div class="form-group">
+                            <label for="date">Date de naissance* :</label>
+                            <input type="date" name="ddn" id="date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cp">Code postal* :</label>
+                            <input type="text" name="cp" id="cp" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adresse">Adresse :</label>
+                            <input type="text" name="adresse" id="adresse" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="ville">Ville :</label>
+                            <input type="text" name="ville" id="ville" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="mail">Email* :</label>
+                            <input type="text" name="mail" id="mail" class="form-control" placeholder="dave.loper@afpa.fr" required>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Votre demande</legend>
-                        <label for="sujet">Sujet* :</label><select name="sujet" required>
-                                                                <option>Veuillez séléctionner un sujet</option>
-                                                                <option>Mes commandes</option>
-                                                                <option>Question sur un produit</option>
-                                                                <option>Réclamation</option>
-                                                                <option>Autres</option>
-                                                           </select><br>
-                        <label for="question">Votre question* :</label><textarea name="question" rows="2" cols="30" required></textarea><br>
+                        <div class="form-group">
+                            <label for="sujet">Sujet* :</label>
+                            <select name="sujet" class="form-control" required>
+                                <option>Veuillez séléctionner un sujet</option>
+                                <option>Mes commandes</option>
+                                <option>Question sur un produit</option>
+                                <option>Réclamation</option>
+                                <option>Autres</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="question">Votre question* :</label>
+                            <textarea name="question" rows="2" cols="30" class="form-control" required></textarea>
+                        </div>
                     </fieldset>
-                    <input type="checkbox" name="formulaire" value="formulaire" required>* J'accepte le traitement informatique de ce formulaire<br>
-                    <button type="submit">Envoyer</button>
-                    <button type="reset">Annuler</button>
+                    <input type="checkbox" name="formulaire" value="formulaire" required>* J'accepte le traitement informatique de ce formulaire<br><br>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-dark btn-outline-primary text-light">Envoyer</button>
+                        <button type="reset" class="btn btn-dark btn-outline-primary text-light">Annuler</button>
+                    </div>
             </form>
-        <footer>
-            <ul type="disc">
-                <li><a href="index.html" title="nope">Mention légales</a></li>
-                <li><a href="index.html" title="nope">Horaires</a></li>
-                <li><a href="index.html" title="nope">Plan du site</a></li>
-            </ul>
-        </footer>
+            <br>
+            <footer>
+                <ul class="nav mr-auto navbar-dark bg-dark rounded">
+                    <li class="nav-item">
+                      <a class="nav-link active text-light" href="index.html">mentions légales</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active text-light" href="index.html">horaires</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active text-light" href="index.html">plan du site</a>
+                    </li>
+                  </ul>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
