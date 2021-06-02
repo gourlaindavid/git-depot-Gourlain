@@ -179,5 +179,15 @@ bouton8.addEventListener("click",clickbtn8);
 
 function clickbtn8() 
 {
-    
+    var note=prompt("Saisir un nombre");
+    var somme;
+    var nbnote=0;
+    while(note!=0)
+    {
+        somme=somme+note;
+        note=prompt("Saisir à nouveau un nombre\nEntrez zero une fois toutes les notes entrez")
+        nbnote++;
+    }
+    var moyenne=somme/nbnote;
+    alert("La somme des notes est "+somme+" et leurs moyennes est "+moyenne); 
 } 
