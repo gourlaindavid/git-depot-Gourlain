@@ -38,13 +38,13 @@ function clickbtn2()
     var c=1.00;
     var d=true;
 
-    document.write("Ceci est une chaine de caractère :"+a);
+    alert("Ceci est une chaine de caractère :"+a);
     b--;
-    document.write(b);
+    alert(b);
     c=a;
-    document.write(c);
+    alert(c);
     d=false;
-    document.write(d);
+    alert(d);
 }
 
 //exercice 3
@@ -135,5 +135,49 @@ bouton6.addEventListener("click",clickbtn6);
 
 function clickbtn6()
 {
-    
+    var numnom=1;
+    var nbnom=0;
+    var resnom=" ";
+    do
+    {   
+        var nom=prompt("Saisissez le prénom N°"+numnom);
+        /*console.log(nom);
+        console.log(resnom);*/
+        if(nom!=null)
+        {
+            resnom=resnom+nom+", ";
+            numnom++;
+            nbnom++;
+        }
+    }while(nom!=null)
+    alert("Vous avez saisis "+nbnom+" les voici:\n"+resnom);
 }
+
+//exercice 7
+var bouton7= document.getElementById("ex7");
+bouton7.addEventListener("click",clickbtn7);
+
+function clickbtn7()
+{
+    var final=prompt("Ecrire un nombre");
+    var suite=" ";
+    var calcul;
+    calcul=final;
+    while(calcul!=0)
+    {
+        calcul--;
+        suite=suite+calcul+",";
+        /*console.log(calcul);
+        console.log(suite);*/
+    }
+    alert("Voici les nombres le précédent:\n"+suite);
+}
+
+//exercice 8
+var bouton8= document.getElementById("ex8");
+bouton8.addEventListener("click",clickbtn8);
+
+function clickbtn8() 
+{
+    
+} 
