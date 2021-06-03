@@ -180,14 +180,44 @@ bouton8.addEventListener("click",clickbtn8);
 function clickbtn8() 
 {
     var note=prompt("Saisir un nombre");
-    var somme;
+    note=parseInt(note);
+    var somme=0;
     var nbnote=0;
     while(note!=0)
     {
         somme=somme+note;
+        console.log(note);
+        console.log(somme);
         note=prompt("Saisir à nouveau un nombre\nEntrez zero une fois toutes les notes entrez")
+        note=parseInt(note)
         nbnote++;
     }
     var moyenne=somme/nbnote;
-    alert("La somme des notes est "+somme+" et leurs moyennes est "+moyenne); 
+    alert("La somme des notes est "+somme+" et leurs moyennes est "+moyenne);
 } 
+
+//exercice 9
+var bouton9= document.getElementById("ex9");
+bouton9.addEventListener("click",clickbtn9);
+
+function clickbtn9() 
+{
+    var n=prompt("Entrez un chiffre");
+    n=parseInt(n);
+    var x=prompt("Entrez un autre chiffre");
+    x=parseInt(x)
+    var decompt=0;
+    var resultant;
+    var affich;
+    do
+    {
+        decompt++;
+        resultant=decompt*x;
+        console.log(typeof decompt);
+        affich=affich+decompt+" x "+x+" = "+resultant+"\n";
+        console.log(typeof decompt);
+        console.log(typeof affich);
+        console.log(affich);
+    }while(decompt!=n)
+    alert(affich);
+}
