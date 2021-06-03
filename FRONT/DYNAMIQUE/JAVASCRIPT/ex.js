@@ -41,7 +41,7 @@ function clickbtn2()
     alert("Ceci est une chaine de caractère :"+a);
     b--;
     alert(b);
-    c=a;
+    c=c+a;
     alert(c);
     d=false;
     alert(d);
@@ -208,16 +208,34 @@ function clickbtn9()
     x=parseInt(x)
     var decompt=0;
     var resultant;
-    var affich;
+    var affich="";
+    decompt=parseInt(decompt);
     do
     {
         decompt++;
-        resultant=decompt*x;
-        console.log(typeof decompt);
-        affich=affich+decompt+" x "+x+" = "+resultant+"\n";
-        console.log(typeof decompt);
-        console.log(typeof affich);
-        console.log(affich);
+        resultant=decompt*x;/*console.log(typeof decompt);*/
+        affich=affich+decompt+" x "+x+" = "+resultant+"\n";/*console.log(typeof affich);
+                                                           console.log(affich);*/
     }while(decompt!=n)
     alert(affich);
+}
+
+//exercice 10
+var bouton10= document.getElementById("ex10");
+bouton10.addEventListener("click",clickbtn10);
+
+function clickbtn10() 
+{
+    var mot = prompt("Entrez un mot");
+    var voyelles = "aeiouyAEIOUY";
+    var compteur = 0;
+    for (i=0;i<mot.length;i++)
+    {
+        var lettre = mot.substring(i, i+1);
+        if (voyelles.indexOf(lettre) != -1) 
+        {
+            compteur++;
+        }
+    }
+    alert("Le nombre de voyelles est de : " + compteur);
 }
