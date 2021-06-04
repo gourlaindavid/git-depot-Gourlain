@@ -4,7 +4,22 @@ bouton1.addEventListener("click",clickbtn1);
 
 function clickbtn1()
 {
-   
+    var nb=parseInt(prompt("Entrez un nombre"));
+    var multip=parseInt(prompt("Entrez un multiplicateur"));
+    var x;
+    var y;
+    function afficheimg()
+    {
+        document.write("<img src=papillon.jpg><br>");
+    }
+    function produit()
+    {
+        x=nb*nb*nb;
+        y=nb*multip;
+    }
+    afficheimg();
+    produit();
+    document.write("Le cube de "+nb+" est égal à "+x+"<br>Le produit de "+nb+" x "+multip+" est égal à "+y);
 }
 
 //exercice 2
