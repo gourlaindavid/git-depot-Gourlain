@@ -28,12 +28,3 @@ function clickbtn1()
     moy=calcul/tab.length;
     console.log(moy);
 }
-
-//exercice 2
-var bouton2= document.getElementById("ex2");
-bouton2.addEventListener("click",clickbtn2);
-
-function clickbtn2()
-{
-    
-}
