@@ -7,11 +7,17 @@
         <title>js ex</title>
     </head>
     <body>
-        <form action="" method="get">
+        <form action="" method="POST">
+            <legend>Retour de donner</legend>
             <label for="entrer">Saisissez un texte puis pressez  le bouton 'Contrôle'</label><br>
             <input type="text" name="entrer" id="entrer" required>
             <button type="submit" id="control">Contrôler</button>
+        </form><br><br>
+        <form action="" method="get">
+            <label for="verif">Entrez votre proposition</label><br>
+            <input type="text" name="verif" id="verif">
+            <button type="submit" id="btnverif">Vérification</button>
         </form>
-        <script src="ex.js"></script>
+        <script src="event.js"></script>
     </body>
 </html>
