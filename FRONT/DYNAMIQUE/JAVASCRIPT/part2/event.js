@@ -13,14 +13,15 @@ var btnverif= document.getElementById("btnverif");
 btnverif.addEventListener("click",clickverif);
 function clickverif()
 {
-    var nbmag=Math.random();
+    var nbmag=Math.floor(Math.random()*100)+1;
     console.log(nbmag);
     var test=false;
-    /*while(test!=true)
+    var propo= document.getElementById("verif").value;
+    while(test!=true)
     {
         console.log(propo);
         console.log(test);
-        var propo= document.getElementById("verif").value;
+        console.log(nbmag);
         if(propo==nbmag)
         {
             test=true;
@@ -37,5 +38,5 @@ function clickverif()
             alert("trop grand");
             propo=window.prompt("Entrez votre proposition");
         }
-    }*/
+    }
 }
