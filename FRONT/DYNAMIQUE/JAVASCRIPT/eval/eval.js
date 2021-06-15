@@ -33,3 +33,19 @@ function clickbtn1()
 
 //ex2
 
+var affich= "<p>";
+var mult;
+var x;
+
+var btnmult1= document.getElementById("btnmult1");
+btnmult1.addEventListener("click",tblmult(1),);
+function tblmult()
+{
+    document.getElementById("resultat2").innerHTML= ("btn fonctionne");
+    for(i=0; i<=10; i++)
+    {
+        calc=i*x;
+        affich= affich+i+" x "+x+" = "+calc+"<br>";
+    }
+    document.getElementById("resultat2").innerHTML= (affich+"</p>");
+}
