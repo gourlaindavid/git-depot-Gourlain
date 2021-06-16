@@ -17,7 +17,7 @@ function clickbtn3()
         {
             alert("nom non reconnu");
         }
-        if(nom==tab)
+        else
         {
             var pos= tab.indexOf(nom);
             var removed= tab.splice(pos,1);
