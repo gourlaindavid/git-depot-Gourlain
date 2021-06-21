@@ -49,39 +49,43 @@
               </nav>
             <img src="img/promotion.jpg" class="img-fluid" alt="promo">
             <p>* Ces zones sont obligatoires</p>
-            <form action="http://bienvu.net/script.php" method="POST" id="formulaire_contact">
+            <form action="http://bienvu.net/script.php" method="POST" id="formulaire_contact" >
                     <fieldset>
                         <legend>Vos coordonnées</legend>
                         <div class="form-group">
                             <label for="nom">Votre nom* :</label>
-                            <input type="text" name="nom" id="nom" class="form-control" required>
+                            <input type="text" name="nom" id="nom" class="form-control" >
+                            <div id="errnom"></div>
                         </div>
                         <div class="form-group">
                             <label for="prénom">Votre prénom* :</label>
-                            <input type="text" name="prénom" id="prénom" class="form-control" required>
+                            <input type="text" name="prénom" id="prenom" class="form-control" >
+                            <div id="errprenom"></div>
                         </div>
-                        <label for="sexe" class="form-check-label">Sexe* :</label><br>
+                        <label for="sexe" id="sexe" class="form-check-label">Sexe* :</label><br>
                         <div class="form-check form-check-inline">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="sexe" value="féminin">
-                                <label class="form-check-label" for="sexe">Féminin</label>
+                                <input class="form-check-input" type="radio" id="sexef" value="féminin" >
+                                <label class="form-check-label" for="sexef">Féminin</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="sexe" value="masculin">
-                                <label class="form-check-label" for="sexe">Masculin</label>
+                                <input class="form-check-input" type="radio" id="sexem" value="masculin" >
+                                <label class="form-check-label" for="sexem">Masculin</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" id="sexe" value="neutre">
-                                <label class="form-check-label" for="sexe">Neutre</label>
+                                <input class="form-check-input" type="radio" id="sexen" value="neutre" >
+                                <label class="form-check-label" for="sexen">Neutre</label>
                             </div>
                         </div><br><br>
                         <div class="form-group">
                             <label for="date">Date de naissance* :</label>
-                            <input type="date" name="ddn" id="date" class="form-control" required>
+                            <input type="date" name="ddn" id="date" class="form-control" >
+                            <div id="errdtn"></div>
                         </div>
                         <div class="form-group">
                             <label for="cp">Code postal* :</label>
-                            <input type="text" name="cp" id="cp" class="form-control" required>
+                            <input type="text" name="cp" id="cp" class="form-control" >
+                            <div id="errcp"></div>
                         </div>
                         <div class="form-group">
                             <label for="adresse">Adresse :</label>
@@ -93,14 +97,15 @@
                         </div>
                         <div class="form-group">
                             <label for="mail">Email* :</label>
-                            <input type="text" name="mail" id="mail" class="form-control" placeholder="dave.loper@afpa.fr" required>
+                            <input type="text" name="mail" id="mail" class="form-control" placeholder="dave.loper@afpa.fr" >
+                            <div id="errmail"></div>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Votre demande</legend>
                         <div class="form-group">
                             <label for="sujet">Sujet* :</label>
-                            <select name="sujet" class="form-control" required>
+                            <select name="sujet" class="form-control" >
                                 <option>Veuillez séléctionner un sujet</option>
                                 <option>Mes commandes</option>
                                 <option>Question sur un produit</option>
@@ -110,13 +115,14 @@
                         </div>
                         <div class="form-group">
                             <label for="question">Votre question* :</label>
-                            <textarea name="question" rows="2" cols="30" class="form-control" required></textarea>
+                            <textarea name="question" id="question" rows="2" cols="30" class="form-control" ></textarea>
+                            <div id="errquestion"></div>
                         </div>
                     </fieldset>
-                    <input type="checkbox" name="formulaire" value="formulaire" required>* J'accepte le traitement informatique de ce formulaire<br><br>
+                    <input type="checkbox" name="formulaire" value="formulaire" >* J'accepte le traitement informatique de ce formulaire<br><br>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-dark btn-outline-primary text-light">Envoyer</button>
-                        <button type="reset" class="btn btn-dark btn-outline-primary text-light">Annuler</button>
+                        <button type="submit" id="envoie" class="btn btn-dark btn-outline-primary text-light">Envoyer</button>
+                        <button type="reset"  class="btn btn-dark btn-outline-primary text-light">Annuler</button>
                     </div>
             </form>
             <br>
@@ -137,5 +143,6 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="js/eval5.js"></script>
     </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>accueil jarditou</title>
+        <meta name="gourlain" content="accueil">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <form  name ="formulaire" action = "inscription_trait.htm"  method ='post' onsubmit="return fenvoi()" >
+        <p>Vous devez saisir votre adresse mail en guise d'identifiant et choisir un mot de passe.
+            <label>Tapez votre adresse mail : </label>	
+            <input type = "email" required placeholder = "n'oubliez pas @ et le point après @" 
+                    name ='mail1'>
+            <label>Confirmez votre adresse mail : </label>	
+                <input type = "email" required name ='mail2'>
+            <label>Saisissez mot de passe :</label>
+            <input type = "password" required  pattern ='[A-z0-9]{6,8}' maxlength ='8' 
+                    placeholder = 'entre 6 et 8 lettres ou chiffres' name ='passe1'>
+            <label>Confirmer le mot de passe : </label>
+                <input type = "password" required  pattern = '[A-z0-9]{6,8}'  
+                    maxlength ='8' name ='passe2' >
+            <label></label>
+            <button type ="submit"> inscription</button>
+        </form>
+    </body>
+</html>
