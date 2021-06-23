@@ -17,6 +17,7 @@ function verif(event)
     var cp=document.getElementById("cp");
     var mail=document.getElementById("mail");
     var question=document.getElementById("question");
+    var condi=document.getElementById("condi");
 
     //test nom
     if(!nomregex.test(nom.value))
@@ -51,5 +52,73 @@ function verif(event)
     }
 
     //test date de naissance
+    if(!dtnregex.test(dtn.value))
+    {
+        event.preventDefault();
+        document.getElementById("errdtn").innerHTML= ("<p>Entrez une date de naissance valide</p>");
+    }
+    if(dtn.value=="")
+    {
+        event.preventDefault();
+        document.getElementById("errdtn").innerHTML= ("<p>Entrez une date de naissance</p>");
+    }
+    if(dtnregex.test(dtn.value))
+    {
+        document.getElementById("errdtn").innerHTML="";
+    }
+
+    //test code postal
+    if(!cpregex.test(cp.value))
+    {
+        event.preventDefault();
+        document.getElementById("errcp").innerHTML= ("<p>Entrez un code postal valide</p>");
+    }
+    if(cp.value=="")
+    {
+        event.preventDefault();
+        document.getElementById("errcp").innerHTML= ("<p>Entrez un code postal</p>");
+    }
+    if(cpregex.test(cp.value))
+    {
+        document.getElementById("errcp").innerHTML="";
+    }
+
+    //test email
+    if(!mailregex.test(mail.value))
+    {
+        event.preventDefault();
+        document.getElementById("errmail").innerHTML= ("<p>Entrez un email valide</p>");
+    }
+    if(mail.value=="")
+    {
+        event.preventDefault();
+        document.getElementById("errmail").innerHTML= ("<p>Entrez un email</p>");
+    }
+    if(mailregex.test(mail.value))
+    {
+        document.getElementById("errmail").innerHTML="";
+    }
     
+    //test question 
+    if(question.value=="")
+    {
+        event.preventDefault();
+        document.getElementById("errquestion").innerHTML= ("<p>Entrez une question</p>");
+    }
+    if(question.value!="")
+    {
+        event.preventDefault();
+        document.getElementById("errquestion").innerHTML= "";
+    }
+
+    //test condition
+    if(condi.check==true)
+    {
+        document.getElementById("errcondi").innerHTML= "";
+    }
+    if(condi.check!=true)
+    {
+        event.preventDefault();
+        document.getElementById("errcondi").innerHTML= "Veuillez accepter les conditions d'utilisation";
+    }
 }
