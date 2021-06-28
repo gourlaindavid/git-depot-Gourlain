@@ -1,0 +1,52 @@
+.header
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.logo
+{
+    width: 35%;
+    height: 20%;
+}
+.hidden
+{
+    width: 20%;
+}
+.tlj
+{
+    font-size: 15pt;
+}
+nav
+{
+    display: flex;
+    flex-direction: column;
+}
+.corp
+{
+    display: flex;
+    width: 100%;
+    font-size-adjust: inherit;
+}
+.art
+{
+    width: 60%;
+}
+.asi
+{
+    display: none;
+}
+
+
+/*design des barres de lien*/
+.menulien
+{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 20px 20px;
+    background-color: black;
+}
+.lien
+{
+    color: white;
+}

@@ -1,0 +1,48 @@
+.header
+{
+    display: flex;
+    width: 100%;
+}
+.hidden
+{
+    width: 25%;
+}
+.tlj
+{
+    font-size: 25pt;
+}
+nav
+{
+    display: flex;
+    flex-direction: column;
+}
+.corp
+{
+    display: flex;
+    width: 100%;
+}
+.art
+{
+    width: 60%;
+}
+.asi
+{
+    width: 40%;
+    background-color: grey;
+}
+.crochet
+{
+    font-size: 17pt;
+}
+
+/*design des barres de lien*/
+.menulien
+{
+    display: flex;
+    padding: 20px 0px 20px 20px;
+    background-color: black;
+}
+.lien
+{
+    color: white;
+}
