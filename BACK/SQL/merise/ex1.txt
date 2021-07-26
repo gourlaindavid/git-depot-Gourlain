@@ -1,0 +1,57 @@
+CREATE TABLE Salle(
+   sal_numero INT NOT NULL,
+   PRIMARY KEY(sal_numero)
+);
+
+CREATE TABLE Professeur(
+   pro_id INT NOT NULL,
+   pro_nom VARCHAR(30) NOT NULL,
+   PRIMARY KEY(pro_id)
+);
+
+CREATE TABLE Classe(
+   cla_id INT NOT NULL,
+   cla_nom VARCHAR(30) NOT NULL,
+   cla_salle INT NOT NULL,
+   sal_numero INT NOT NULL,
+   PRIMARY KEY(cla_id),
+   UNIQUE(sal_numero),
+   UNIQUE(cla_nom),
+   FOREIGN KEY(sal_numero) REFERENCES Salle(sal_numero)
+);
+
+CREATE TABLE Matiere(
+   mat_id INT NOT NULL,
+   mat_libelle VARCHAR(30) NOT NULL,
+   pro_id INT NOT NULL,
+   PRIMARY KEY(mat_id),
+   UNIQUE(mat_libelle),
+   FOREIGN KEY(pro_id) REFERENCES Professeur(pro_id)
+);
+
+CREATE TABLE Eleve(
+   ele_id INT NOT NULL,
+   ele_nom VARCHAR(20) NOT NULL,
+   ele_prenom VARCHAR(20) NOT NULL,
+   cla_id INT NOT NULL,
+   PRIMARY KEY(ele_id),
+   FOREIGN KEY(cla_id) REFERENCES Classe(cla_id)
+);
+
+CREATE TABLE classe_matiere(
+   cla_id INT NOT NULL,
+   mat_id INT NOT NULL,
+   clas_mat_nombre_heures INT NOT NULL,
+   PRIMARY KEY(cla_id, mat_id),
+   FOREIGN KEY(cla_id) REFERENCES Classe(cla_id),
+   FOREIGN KEY(mat_id) REFERENCES Matiere(mat_id)
+);
+
+CREATE TABLE eleve_matiere(
+   mat_id INT NOT NULL,
+   ele_id INT NOT NULL,
+   ele_mat_note DECIMAL(4,2),
+   PRIMARY KEY(mat_id, ele_id),
+   FOREIGN KEY(mat_id) REFERENCES Matiere(mat_id),
+   FOREIGN KEY(ele_id) REFERENCES Eleve(ele_id)
+);
