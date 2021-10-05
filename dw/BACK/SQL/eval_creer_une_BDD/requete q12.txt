@@ -1,0 +1,3 @@
+SELECT COUNT(cus_countries_id) AS 'nb clients Canadien'
+FROM customers
+WHERE cus_countries_id = 'CA'

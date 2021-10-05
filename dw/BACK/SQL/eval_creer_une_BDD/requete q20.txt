@@ -1,0 +1,7 @@
+DELETE 
+FROM products
+WHERE pro_id
+IN (SELECT pro_id 
+    FROM categories 
+    JOIN products ON pro_cat_id = cat_id 
+    WHERE pro_cat_id = 9 AND cat_name LIKE 'Tondeuses électriques')

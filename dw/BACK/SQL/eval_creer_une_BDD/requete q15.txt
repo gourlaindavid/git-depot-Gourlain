@@ -1,0 +1,4 @@
+SELECT SUM(ode_unit_price -(ode_unit_price / 100 * ode_discount) * ode_quantity)
+FROM orders_details
+JOIN orders ON ode_ord_id = ord_id
+WHERE YEAR(ord_order_date) = 2020

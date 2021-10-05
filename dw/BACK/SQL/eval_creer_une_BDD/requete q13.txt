@@ -1,0 +1,5 @@
+SELECT ode_id, ode_unit_price, ode_discount, ode_quantity, ode_ord_id, ode_pro_id, ord_order_date
+FROM orders_details
+JOIN orders ON ode_ord_id = ord_id
+WHERE YEAR(ord_order_date) = 2020
+ORDER BY ode_ord_id ASC

@@ -1,0 +1,4 @@
+SELECT IFNULL(pro_sup_id, sup_id), sup_name, sup_city, sup_contact, sup_address
+FROM suppliers
+JOIN products ON sup_id = pro_sup_id
+GROUP BY pro_sup_id

@@ -1,0 +1,2 @@
+SELECT AVG((ode_unit_price -(ode_unit_price / 100 * ode_discount))* ode_quantity) AS paniermoy
+FROM orders_details

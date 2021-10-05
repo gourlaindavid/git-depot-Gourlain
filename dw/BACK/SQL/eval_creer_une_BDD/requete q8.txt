@@ -1,0 +1,6 @@
+SELECT pro_id, pro_ref, pro_color, pro_name, cus_id, cus_lastname, ord_id, ode_id
+FROM customers
+JOIN orders ON ord_cus_id = cus_id
+JOIN orders_details ON ode_ord_id = ord_id
+JOIN products ON pro_id = ode_pro_id
+WHERE cus_lastname = "Pikatchien"

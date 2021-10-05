@@ -1,0 +1,6 @@
+CREATE ROLE marketing
+GRANT ALL
+ON gescom_afpa.products, gescom_afpa.categories
+TO marketing
+GRANT select
+ON gescom_afpa.customers, gescom_afpa.orders, gescom_afpa.orders_details

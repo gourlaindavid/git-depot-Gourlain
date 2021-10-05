@@ -1,0 +1,7 @@
+CREATE USER 'bernard Tapos';
+CREATE USER 'bernard Tapas';
+CREATE USER 'bernard Tapis';
+CREATE USER 'bernard Tapus';
+CREATE USER 'bernard Tapes';
+
+CREATE GROUP 'marketing';

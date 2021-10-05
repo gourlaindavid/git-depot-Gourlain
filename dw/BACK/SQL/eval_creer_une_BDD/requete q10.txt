@@ -1,0 +1,8 @@
+SELECT CONCAT( e.emp_lastname,' ', e.emp_firstname ) AS employer,
+       CONCAT( sup.emp_lastname,' ',sup.emp_firstname ) AS superieur,
+       pos_libelle
+FROM employees AS e
+JOIN posts ON pos_id = emp_pos_id
+LEFT OUTER JOIN employees AS sup ON sup.emp_id = e.emp_superior_id
+WHERE e.emp_sho_id = 3
+      ORDER BY employer ASC

@@ -1,0 +1,4 @@
+SELECT CONCAT ('produit n°',pro_id,', ',pro_name,', vendu ',pro_price)
+FROM products
+ORDER BY pro_price ASC
+LIMIT 1

@@ -1,0 +1,4 @@
+SELECT pro_id, pro_name, ode_id, ode_ord_id
+FROM products, orders_details
+ORDER BY ode_discount DESC
+LIMIT 1

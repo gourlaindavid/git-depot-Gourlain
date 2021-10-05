@@ -1,0 +1,6 @@
+SELECT ord_id, cus_lastname, ord_order_date, ode_quantity,
+ANY_VALUE((ode_unit_price -(ode_unit_price / 100 * ode_discount)) * ode_quantity) AS total
+FROM orders
+JOIN customers ON ord_cus_id = cus_id
+JOIN orders_details ON ord_id = ode_ord_id
+ORDER BY total DESC
